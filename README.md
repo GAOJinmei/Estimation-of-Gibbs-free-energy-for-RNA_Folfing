@@ -1,1 +1,0 @@
-# Estimation-of-Gibbs-free-energy-for-RNA_Folfing
