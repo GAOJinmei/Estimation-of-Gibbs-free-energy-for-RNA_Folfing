@@ -34,9 +34,16 @@ D < 21 are choosen
 For each pair:
 $f_obs = N(r)/N$
 
+N(r) is the number of pair that has distance=r
+
+N is the total number of distances
+
 3. reference frequency
 
 $f_ref = N(r)/N$
+N(r) is the number of pair that has distance=r
+
+N is the total number of distances
 
 5. the score (pseudo-energy)
 
