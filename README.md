@@ -7,9 +7,10 @@ For a given ribonucleotide chain, the RNA folding problem consists in finding th
 
 
 
-## Authors
+# Authors 
+* Jinmei GAO , <sub>School project M2 GENIOMHE paris saclay - Structural Bioinformatics - Professor Guillaume Postic</sub>
+![image](https://user-images.githubusercontent.com/91075082/212911968-8f96c123-a30d-4afe-9317-10727520eb41.png)
 
-- Jinmei GAO
 
 
 
