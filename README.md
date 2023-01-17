@@ -63,6 +63,7 @@ To run script2, run the following command
 ```bash
   python script2.py
 ```
+```
 
 
 ## script3.py
