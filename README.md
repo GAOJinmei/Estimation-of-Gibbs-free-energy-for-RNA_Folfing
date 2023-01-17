@@ -40,7 +40,6 @@ pip install pandas
 
 conda install -c conda-forge matplotlib
 
-conda install -c conda-forge tqdm
 ```
 
 
