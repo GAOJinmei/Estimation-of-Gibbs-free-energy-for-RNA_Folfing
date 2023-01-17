@@ -9,13 +9,12 @@ For a given ribonucleotide chain, the RNA folding problem consists in finding th
 
 # Authors 
 * Jinmei GAO , <sub>School project M2 GENIOMHE paris saclay - Structural Bioinformatics - Professor Guillaume Postic</sub>
-![image](https://user-images.githubusercontent.com/91075082/212911968-8f96c123-a30d-4afe-9317-10727520eb41.png)
-
 
 
 
 # Goals
-I will implement 3 Python scripts to:
+ 3 Python scripts will be implemented ![Uploading image.png…]()
+
 
 - train the objective function, using interatomic distance distributions that are computed from a dataset of known (10 RNA structures) (i.e., experimentally determined) 3D structures;
 the 10 RNA structures are 10 pdb files which you can find in the pdb folder
