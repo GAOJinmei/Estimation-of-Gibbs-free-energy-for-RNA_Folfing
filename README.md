@@ -25,14 +25,22 @@ the 10 RNA structures are 10 pdb files which you can find in the pdb folder
 # Calculate distance between two C3 atoms
 ## Euclidean distance
 D(i,j) = $\sqrt{(Xi-Xj)^2+(Yi-Yj)^2+(Zi-Zj)^2}$
-int(D) < 21 are choosed
+
+D < 21 are choosen
 
 # Calculate scores (pseudo-energy) in each distance for each pair of nucleotides
 1. observed probability/frequency
-2. reference frequency
-3. the score (pseudo-energy)
 
+For each pair:
+$f_obs = N(r)/N$
 
+3. reference frequency
+
+$f_ref = N(r)/N$
+
+5. the score (pseudo-energy)
+
+$−log( f_obs(r) / f_ref(r) )$
 
 ## Usage/Examples
 First these packages are required
@@ -93,8 +101,11 @@ x1 and x2 are also the distances
 for example,
 For each pair: 
 if 0<x<=1, x1 = 0, x2 = 1, y1 is the score in distance x1, y2 is the score in distance x2
+
 if 1<x<1.5, x1 = 0, x2 = 1,...
+
 if 1.5<=x<=2, x1 = 1, x2 = 2,...
+
 ...
 
 Gibbs free energy = $sum_{y(x)}$
@@ -107,6 +118,5 @@ check how to use this script
 using the script by using a RNA structure as input (a pdb file)
 ```bash
   python script2.py -pdb 2lx1.pdb
-```
 ```
 
