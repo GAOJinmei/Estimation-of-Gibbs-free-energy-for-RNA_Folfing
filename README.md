@@ -74,8 +74,8 @@ $$ Linear Interpolation(Y) = { y1 + (x - x1) \left (y2 - y1 \over x2 - x1 \right
 
 ## Clone the repository :
 
-Clone the repository :
-```bash git clone https://github.com/GAOJinmei/Estimation-of-Gibbs-free-energy-for-RNA_Folfing.git 
+```bash
+git clone https://github.com/GAOJinmei/Estimation-of-Gibbs-free-energy-for-RNA_Folfing.git 
 ```
 
 ## Usage/Examples
