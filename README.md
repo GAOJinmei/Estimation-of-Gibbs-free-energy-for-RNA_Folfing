@@ -13,7 +13,7 @@ For a given ribonucleotide chain, the RNA folding problem consists in finding th
 
 
 # Goals
- 3 Python scripts will be implemented ![Uploading image.png…]()
+ 3 Python scripts will be implemented
 
 
 - train the objective function, using interatomic distance distributions that are computed from a dataset of known (10 RNA structures) (i.e., experimentally determined) 3D structures;
