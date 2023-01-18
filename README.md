@@ -16,12 +16,13 @@ For a given ribonucleotide chain, the RNA folding problem consists in finding th
  3 Python scripts will be implemented
 
 
-- train the objective function, using interatomic distance distributions that are computed from a dataset of known (10 RNA structures) (i.e., experimentally determined) 3D structures;
+* Train the objective function, using interatomic distance distributions that are computed from a dataset of known (10 RNA structures) (i.e., experimentally determined) 3D structures;
+
 the 10 RNA structures are 10 pdb files which you can find in the pdb folder
 
-- plot the scoring profiles, i.e. the score (or estimated Gibbs free energy) as a function of the interatomic distance;
+* Plot the scoring profiles, i.e. the score (or estimated Gibbs free energy) as a function of the interatomic distance;
 
-- use the objective function to evaluate predicted structures from the RNA-Puzzles dataset.
+* Use the objective function to evaluate predicted structures from the RNA-Puzzles dataset.
 
 # Calculate distance between two C3 atoms
 ## Euclidean distance
