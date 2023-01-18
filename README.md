@@ -20,36 +20,63 @@ For a given ribonucleotide chain, the RNA folding problem consists in finding th
 
 the 10 RNA structures are 10 pdb files which you can find in the pdb folder
 
-* Plot the scoring profiles, i.e. the score (or estimated Gibbs free energy) as a function of the interatomic distance;
+* Plot the scoring profiles, i.e. the score (or estimated Gibbs free energy) as a function of the interatomic distance
 
-* Use the objective function to evaluate predicted structures from the RNA-Puzzles dataset.
+* Using linear interpolation to compute all the distance for a given structure
 
-# Calculate distance between two C3 atoms
-## Euclidean distance
+
+## Overall Constraint 
+
+* Only C3' atoms are taken into account
+ 
+* Only consider intrachain distances are considered
+ 
+* Only consider residues separed by 3 position on the sequence
+
+* Compute observed frequencies ( range of 0 to 20 Ångström of observing two residues i and j separared by a distance bin r
+
+
+ ## Training script : Compute the interactomic distance from a given set of PDB files : 
+* Calculate distance between two C3 atoms
+ Euclidean distance
 D(i,j) = $\sqrt{(Xi-Xj)^2+(Yi-Yj)^2+(Zi-Zj)^2}$
 
 D < 21 are choosen
 
-# Calculate scores (pseudo-energy) in each distance for each pair of nucleotides
-1. observed probability/frequency
+* Compute observed frequencies, range of 0 to 20 Ångström of observing two residues i and j separared by a distance bin r is calculated as follows :
 
-For each pair:
-$f_obs = N(r)/N$
+$$ f_{i,j} ^{OBS}(r) = { N_{i,j}(r) \over N_{i,j} } $$
 
-N(r) is the number of pair that has distance=r
+ Where $N_{i,j}(r)$ is the count of i and j within the distance bin r and $N_{i,j}$ is the count of i and j for all distance bins 
 
-N is the total number of distances
 
-3. reference frequency
+* Compute reference frequency , different residue types are indistinct X                    
 
-$f_ref = N(r)/N$
-N(r) is the number of pair that has distance=r
+ $$ f_{X,X} ^{REF}(r) = { N_{X,X}(r) \over N_{X,X}} $$
 
-N is the total number of distances
 
-5. the score (pseudo-energy)
+- use the objective function to evaluate predicted structures from the RNA-Puzzles dataset.
+* Compute log-ratio of the two frequency (score of pseudo energy)
 
-$−log( f_obs(r) / f_ref(r) )$
+$$ u_{i,j}(r) = { -log \left( f _{i,j} ^{OBS}(r) \over f_{i,j} ^{REF}(r) \right) } $$
+
+
+Training script should therefore generate 10 files of 21 lines. Maximum scoring value will be arbitrarily set to 10 
+
+
+## Testing script : Evaluate predicted structures : 
+
+It will compute all the distances for a given structure using the same treshold as the training script. For each distance, a scoring value will be computed using a linear interpolation as follow :
+
+$$ Linear Interpolation(Y) = { y1 + (x - x1) \left (y2 - y1 \over x2 - x1 \right) } $$
+
+
+
+## Clone the repository :
+
+Clone the repository :
+```git clone https://github.com/GAOJinmei/Estimation-of-Gibbs-free-energy-for-RNA_Folfing.git 
+```
 
 ## Usage/Examples
 First these packages are required
